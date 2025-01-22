@@ -84,11 +84,11 @@ resource "aws_key_pair" "my_key" {
 }
 
 resource "aws_instance" "ec2" {
-  count           = var.instance_count
-  ami             = "ami-06e02ae7bdac6b938"
-  instance_type   = var.instance_type
-  key_name        = aws_key_pair.my_key.key_name
-  subnet_id       = aws_subnet.main.id
+  count                  = var.instance_count
+  ami                    = "ami-06e02ae7bdac6b938"
+  instance_type          = var.instance_type
+  key_name               = aws_key_pair.my_key.key_name
+  subnet_id              = aws_subnet.main.id
   vpc_security_group_ids = [aws_security_group.ssh_sg.id]
 
   tags = {
