@@ -25,3 +25,5 @@ ansible-playbook -i hosts install.yml --private-key ssh-terra
 ```
 
 Ne pas oublier d'ajouter les accès IAM dans l'environnement
+
+La capture est dans [Resultat.png](./Resulat.png)
